@@ -5,23 +5,23 @@
 	3) console.log() прописывать не обязательно, т.к. команда return уже означает вывод результата работы функции.
  */
 
-function averageMark(a, g, p) {
-	
-    // реализуйте здесь задание №1
-    
-	return // ваш ответ;
-}
+ //Homework - Variables
+ // Задача 1 работет с любым кол-вом аргументов
 
-function sayHello(userName) {
-	
-    // реализуйте здесь задание №2
-    
-	return // ваш ответ;
-}
+ function averageMark(...args) {
+	 return Math.round([...args].reduce((acc, grade) => acc + grade) / args.length);
+ }
 
-function calculateFormula() {
-    
-	// реализуйте здесь задание №3
-    
-    return // ваш ответ;
-}
+ // Задача 2
+ function sayHello(userName) {
+	 return `Привет, мир! Меня зовут ${userName}`;
+ }
+
+ // Задача 3
+ function calculateFormula() {
+     let x = 2,
+         y = 22,
+         z = 0
+	 return (x * y) + (5 * z) + (x - 1);
+ }
+
