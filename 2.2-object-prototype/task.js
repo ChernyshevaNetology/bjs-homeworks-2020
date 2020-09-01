@@ -46,12 +46,12 @@ const leapDays = (year) => {
 };
 
 function checkBirthday(birthday) {
-  let diff = Date.now() - Date.parse(birthday); // высчитываем разницу по инструкции в задании
+  const diff = Date.now() - Date.parse(birthday); // высчитываем разницу по инструкции в задании
 
   // считаем сколько дней прожил пользователь, отнимаем дни високосных годов
-  let days =
+  const days =
     Math.floor(diff / 1000 / 60 / 60 / 24) -
     leapDays(new Date(birthday).getFullYear());
-  let age = days / 365; // дни делиим на 365 - получаем возраст
+  const age = days / 365; // дни делиим на 365 - получаем возраст
   return age >= 18; // работает с точностью до дня, если у пользователя сегодня день рождения и ему 18 - вернет true, если завтра уже false
 }
