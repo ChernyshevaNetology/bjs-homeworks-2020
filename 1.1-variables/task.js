@@ -8,7 +8,7 @@
  //Homework - Variables
  // Задача 1 работет с любым кол-вом аргументов
 
- function averageMark(...args) {
+ const averageMark = (...args) => {
 	 return Math.round([...args].reduce((acc, grade) => acc + grade) / args.length);
  }
 
